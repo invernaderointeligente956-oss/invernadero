@@ -1,3 +1,4 @@
+
 import React from "react";
 import { Link } from "react-router-dom";
 
@@ -20,15 +21,8 @@ function Inicio() {
                     <Link to="/testimonios">Testimonios</Link>
                     <Link to="/contacto">Contacto</Link>
                 </nav>
-                <div className="inicio-acceso">
-                    <Link to="/login" className="inicio-login">
-                        Iniciar sesión
-                    </Link>
-                    <Link to="/registro" className="inicio-registro">
-                        Registrarse
-                    </Link>
-                </div>
             </header>
+
             <main>
                 <section className="inicio-portada">
                     <div className="inicio-portada-texto">
@@ -47,29 +41,23 @@ function Inicio() {
                             recursos naturales.
                         </p>
                         <div className="inicio-botones">
-                            <Link
-                                to="/sobre-nosotros"
-                                className="inicio-boton-principal"
-                            >
+                            <Link to="/sobre-nosotros" className="inicio-boton-principal">
                                 Conócenos
                             </Link>
-                            <Link
-                                to="/productos"
-                                className="inicio-boton-secundario"
-                            >
+                            <Link to="/productos" className="inicio-boton-secundario">
                                 Ver productos
                             </Link>
                         </div>
                     </div>
+
                     <div className="inicio-portada-imagen">
                         <img
                             src="/SALA%202.jpeg"
                             alt="Espacio del proyecto Invernadero Inteligente"
                             onError={(e) => {
-                                console.error(
-                                    "No se pudo cargar la imagen:",
-                                    e.currentTarget.src);}} />
-
+                                console.error("No se pudo cargar la imagen:", e.currentTarget.src);
+                            }}
+                        />
                         <div className="inicio-imagen-etiqueta">
                             <span>🌱</span>
                             <div>
@@ -79,13 +67,12 @@ function Inicio() {
                         </div>
                     </div>
                 </section>
+
                 <section className="inicio-introduccion">
                     <span className="inicio-subtitulo">
                         NUESTRO PROYECTO
                     </span>
-
                     <h2>Innovación para una agricultura sostenible</h2>
-
                     <p>
                         Buscamos integrar conocimientos tecnológicos
                         y agrícolas para fomentar el aprendizaje práctico,
@@ -94,7 +81,6 @@ function Inicio() {
                     </p>
                 </section>
             </main>
-
         </div>
     );
 }
