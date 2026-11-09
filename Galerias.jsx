@@ -1,4 +1,4 @@
-
+```jsx
 import React from "react";
 import { Link } from "react-router-dom";
 
@@ -6,38 +6,32 @@ function Galerias() {
     const imagenes = [
         {
             titulo: "Nuestro invernadero",
-            descripcion:
-                "Espacio destinado al desarrollo y cuidado de los cultivos.",
+            descripcion: "Espacio destinado al desarrollo y cuidado de los cultivos.",
             imagen: "/disenos-invernadero-campos-fresas-plantas-fresas-filas_467936-803.avif"
         },
         {
             titulo: "Cultivos y plantas",
-            descripcion:
-                "Conoce los cultivos que forman parte de nuestro proyecto.",
+            descripcion: "Conoce los cultivos que forman parte de nuestro proyecto.",
             imagen: "/cultivos.jpg"
         },
         {
             titulo: "Trabajo en equipo",
-            descripcion:
-                "Estudiantes y colaboradores participan en el cuidado del invernadero.",
+            descripcion: "Estudiantes y colaboradores participan en el cuidado del invernadero.",
             imagen: "/trabajo en equipo.webp"
         },
         {
             titulo: "Tecnología agrícola",
-            descripcion:
-                "Uso de tecnología para apoyar el crecimiento de las plantas.",
+            descripcion: "Uso de tecnología para apoyar el crecimiento de las plantas.",
             imagen: "/tecnologia.jpg"
         },
         {
             titulo: "Cuidado de los cultivos",
-            descripcion:
-                "Actividades de seguimiento y mantenimiento de las plantas.",
+            descripcion: "Actividades de seguimiento y mantenimiento de las plantas.",
             imagen: "/OIP.webp"
         },
         {
             titulo: "Innovación y medio ambiente",
-            descripcion:
-                "Acciones para fomentar una agricultura responsable y sostenible.",
+            descripcion: "Acciones para fomentar una agricultura responsable y sostenible.",
             imagen: "/INOVACION.webp"
         }
     ];
@@ -78,20 +72,14 @@ function Galerias() {
             <main className="galerias-contenido">
                 <div className="galerias-grid">
                     {imagenes.map((item, index) => (
-                        <article
-                            className="galeria-tarjeta"
-                            key={`${item.titulo}-${index}`}
-                        >
+                        <article className="galeria-tarjeta" key={`${item.titulo}-${index}`}>
                             <div className="galeria-foto">
                                 <img
                                     src={item.imagen}
                                     alt={item.titulo}
                                     loading="lazy"
                                     onError={(e) => {
-                                        console.error(
-                                            "No se pudo cargar la imagen:",
-                                            e.currentTarget.src
-                                        );
+                                        console.error("No se pudo cargar la imagen:", e.currentTarget.src);
                                     }}
                                 />
                             </div>
@@ -104,6 +92,28 @@ function Galerias() {
                     ))}
                 </div>
             </main>
+
+            {/* SECCIÓN DE VIDEO MULTIMEDIA */}
+            <section className="galerias-video">
+                <span className="galerias-etiqueta">
+                    CONTENIDO MULTIMEDIA
+                </span>
+
+                <h2>Conoce nuestro invernadero</h2>
+
+                <p>
+                    Descubre mediante este video la importancia de la
+                    tecnología, el cuidado de los cultivos y la agricultura
+                    sostenible.
+                </p>
+
+                <div className="galerias-video-contenedor">
+                    <video controls preload="metadata" poster="/cultivos.jpg">
+                        <source src="/video-invernadero.mp4" type="video/mp4" />
+                        Tu navegador no puede reproducir este video.
+                    </video>
+                </div>
+            </section>
 
             <section className="galerias-mensaje">
                 <h2>Cultivando el futuro</h2>
@@ -123,3 +133,4 @@ function Galerias() {
 }
 
 export default Galerias;
+```
